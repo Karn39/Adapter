@@ -54,13 +54,18 @@ public class CityAdapter extends BaseAdapter{
             holder.layout = (LinearLayout) convertView.findViewById(R.id.CJCULayout);
 
             convertView.setTag(holder);
-            if(data[position][0].equals("1"))
-            {
-                holder.name.setText("Ω");
-            }
         }
         else{
             holder = (ViewHolder) convertView.getTag();
+        }
+
+        if(data[position][0].equals("1"))
+        {
+            holder.name.setText("Ω");
+        }
+        else
+        {
+            holder.name.setText("");
         }
 
         holder.address.setText(data[position][1]);
